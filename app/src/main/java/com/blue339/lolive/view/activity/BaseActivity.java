@@ -11,7 +11,7 @@ import com.blue339.lolive.R;
  */
 public class BaseActivity extends AppCompatActivity{
 
-    protected Toolbar toolbar;
+    protected Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class BaseActivity extends AppCompatActivity{
     }
 
     protected void initBaseView() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
     }
 
 }
