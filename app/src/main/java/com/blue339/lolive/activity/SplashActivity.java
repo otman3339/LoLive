@@ -1,4 +1,4 @@
-package com.blue339.lolive.view.activity;
+package com.blue339.lolive.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -26,6 +26,6 @@ public class SplashActivity extends Activity {
                 startActivity(intent);
                 SplashActivity.this.finish();
             }
-        }, 1500);
+        }, 150);
     }
 }

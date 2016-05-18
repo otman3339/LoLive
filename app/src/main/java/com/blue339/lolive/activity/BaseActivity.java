@@ -1,4 +1,4 @@
-package com.blue339.lolive.view.activity;
+package com.blue339.lolive.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.blue339.lolive.view.activity;
+package com.blue339.lolive.activity;
 
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -23,6 +23,7 @@ public class MainActivity extends BaseActivity {
 
     protected void initView() {
         initBaseView();
+        mToolbar.setTitle(R.string.game);
         setSupportActionBar(mToolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

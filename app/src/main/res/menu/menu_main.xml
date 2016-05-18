@@ -2,13 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item app:showAsAction="collapseActionView"
-        android:title="setting" />
-    <item app:showAsAction="collapseActionView"
-        android:title="setting" />
-    <item app:showAsAction="collapseActionView"
-        android:title="setting" />
-    <item android:title="setting" />
-    <item android:title="setting" />
+    <item android:id="@+id/follow"
+        android:title="@string/follow"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_favorite_white_24dp" />
+
+    <item android:id="@+id/setting"
+        android:title="@string/setting" />
 
 </menu>
