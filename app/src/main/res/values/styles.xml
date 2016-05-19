@@ -10,4 +10,17 @@
 
     <style name="AppTheme" parent="AppTheme.Base"></style>
 
+    <style name="RadioButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingLeft">@dimen/navigation_item_padding_left</item>
+        <item name="android:paddingRight">@dimen/navigation_item_padding_right</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/default_tint_selector</item>
+        <item name="android:textSize">@dimen/navigation_item_text_size</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
 </resources>

@@ -94,90 +94,64 @@
 
             </LinearLayout>
 
-            <View
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/colorDividerLine" />
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_tv_live"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:paddingLeft="@dimen/navigation_item_padding_left"
-                android:paddingRight="@dimen/navigation_item_padding_right"
-                android:drawableLeft="@drawable/ic_live_tv_white_24dp"
-                android:drawableRight="@drawable/ic_navigate_next_white_24dp"
-                android:drawablePadding="10dp"
-                android:gravity="center_vertical"
-                android:text="@string/live"
-                android:textColor="@color/gray"
-                android:textSize="@dimen/navigation_item_text_size"
-                android:background="@color/white" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorDividerLine" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/colorDividerLine" />
+                <RadioButton
+                    android:id="@+id/tv_tv_live"
+                    android:drawableLeft="@drawable/ic_live_tv_white_24dp"
+                    android:drawableRight="@drawable/ic_navigate_next_white_24dp"
+                    android:text="@string/live"
+                    style="@style/RadioButtonStyle"/>
 
-            <TextView
-                android:id="@+id/tv_video"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:paddingLeft="@dimen/navigation_item_padding_left"
-                android:paddingRight="@dimen/navigation_item_padding_right"
-                android:drawableLeft="@drawable/ic_video_library_white_24dp"
-                android:drawableRight="@drawable/ic_navigate_next_white_24dp"
-                android:drawablePadding="10dp"
-                android:gravity="center_vertical"
-                android:text="@string/video"
-                android:textColor="@color/gray"
-                android:textSize="@dimen/navigation_item_text_size"
-                android:background="@color/white" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorDividerLine" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/colorDividerLine" />
+                <RadioButton
+                    android:id="@+id/tv_video"
+                    android:drawableLeft="@drawable/ic_video_library_white_24dp"
+                    android:drawableRight="@drawable/ic_navigate_next_white_24dp"
+                    android:text="@string/video"
+                    style="@style/RadioButtonStyle"/>
 
-            <TextView
-                android:id="@+id/tv_information"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:paddingLeft="@dimen/navigation_item_padding_left"
-                android:paddingRight="@dimen/navigation_item_padding_right"
-                android:drawableLeft="@drawable/ic_library_books_white_24dp"
-                android:drawableRight="@drawable/ic_navigate_next_white_24dp"
-                android:drawablePadding="10dp"
-                android:gravity="center_vertical"
-                android:text="@string/information"
-                android:textColor="@color/gray"
-                android:textSize="@dimen/navigation_item_text_size"
-                android:background="@color/white" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorDividerLine" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/colorDividerLine" />
+                <RadioButton
+                    android:id="@+id/tv_information"
+                    android:drawableLeft="@drawable/ic_library_books_white_24dp"
+                    android:drawableRight="@drawable/ic_navigate_next_white_24dp"
+                    android:text="@string/information"
+                    style="@style/RadioButtonStyle"/>
 
-            <TextView
-                android:id="@+id/tv_shop"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:paddingLeft="@dimen/navigation_item_padding_left"
-                android:paddingRight="@dimen/navigation_item_padding_right"
-                android:drawableLeft="@drawable/ic_shopping_cart_white_24dp"
-                android:drawableRight="@drawable/ic_navigate_next_white_24dp"
-                android:drawablePadding="10dp"
-                android:gravity="center_vertical"
-                android:text="@string/shop"
-                android:textColor="@color/gray"
-                android:textSize="@dimen/navigation_item_text_size"
-                android:background="@color/white" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorDividerLine" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/colorDividerLine" />
+                <RadioButton
+                    android:id="@+id/tv_shop"
+                    android:drawableLeft="@drawable/ic_shopping_cart_white_24dp"
+                    android:drawableRight="@drawable/ic_navigate_next_white_24dp"
+                    android:text="@string/shop"
+                    style="@style/RadioButtonStyle"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorDividerLine" />
+
+            </RadioGroup>
 
         </LinearLayout>
 

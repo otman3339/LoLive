@@ -1,6 +1,5 @@
 package com.blue339.lolive.activity;
 
-import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -8,6 +7,7 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,10 +21,15 @@ public class MainActivity extends BaseActivity {
 
     private TextView tvTvLive, tvVideo, tvInformation, tvShop;
 
+    private View.OnClickListener clickListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        clickListener = new ClickListener();
+
         initView();
     }
 
@@ -37,23 +42,28 @@ public class MainActivity extends BaseActivity {
 
         tvTvLive = (TextView) findViewById(R.id.tv_tv_live);
         Drawable[] tvTvLiveDrawables = tvTvLive.getCompoundDrawables();
-        tvTvLive.setCompoundDrawables(tintDrawable(tvTvLiveDrawables[0], 0.8f), null,
+        tvTvLive.setCompoundDrawables(tintDrawable(tvTvLiveDrawables[0], 1f), null,
                 tintDrawable(tvTvLiveDrawables[2], 1f), null);
 
         tvVideo = (TextView) findViewById(R.id.tv_video);
         Drawable[] tvVideoDrawables = tvVideo.getCompoundDrawables();
-        tvVideo.setCompoundDrawables(tintDrawable(tvVideoDrawables[0], 0.8f), null,
+        tvVideo.setCompoundDrawables(tintDrawable(tvVideoDrawables[0], 1f), null,
                 tintDrawable(tvVideoDrawables[2], 1f), null);
 
         tvInformation = (TextView) findViewById(R.id.tv_information);
         Drawable[] tvInformationDrawables = tvInformation.getCompoundDrawables();
-        tvInformation.setCompoundDrawables(tintDrawable(tvInformationDrawables[0], 0.8f), null,
+        tvInformation.setCompoundDrawables(tintDrawable(tvInformationDrawables[0], 1f), null,
                 tintDrawable(tvInformationDrawables[2], 1f), null);
 
         tvShop = (TextView) findViewById(R.id.tv_shop);
         Drawable[] tvShopDrawables = tvShop.getCompoundDrawables();
-        tvShop.setCompoundDrawables(tintDrawable(tvShopDrawables[0], 0.8f), null,
+        tvShop.setCompoundDrawables(tintDrawable(tvShopDrawables[0], 1f), null,
                 tintDrawable(tvShopDrawables[2], 1f), null);
+
+        tvTvLive.setOnClickListener(clickListener);
+        tvVideo.setOnClickListener(clickListener);
+        tvInformation.setOnClickListener(clickListener);
+        tvShop.setOnClickListener(clickListener);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.channel,
@@ -67,8 +77,7 @@ public class MainActivity extends BaseActivity {
 
         Drawable warpDrawable = DrawableCompat.wrap(drawable);
         DrawableCompat.setTintMode(warpDrawable, PorterDuff.Mode.SRC_IN);
-        DrawableCompat.setTintList(warpDrawable,
-                ColorStateList.valueOf(getResources().getColor(R.color.gray)));
+        DrawableCompat.setTintList(warpDrawable,getResources().getColorStateList(R.color.default_tint_selector));
 
         warpDrawable.setBounds(0, 0, (int) (warpDrawable.getMinimumWidth() * scale),
                 (int) (warpDrawable.getMinimumHeight() * scale));
@@ -89,6 +98,24 @@ public class MainActivity extends BaseActivity {
             mExitTime = System.currentTimeMillis();
         } else {
             finish();
+        }
+    }
+
+    class ClickListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            int id = v.getId();
+            switch (id) {
+                case R.id.tv_tv_live:
+                    break;
+                case R.id.tv_video:
+                    break;
+                case R.id.tv_information:
+                    break;
+                case R.id.tv_shop:
+                    break;
+            }
         }
     }
 }
