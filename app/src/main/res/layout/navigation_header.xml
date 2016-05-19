@@ -105,10 +105,11 @@
                     android:background="@color/colorDividerLine" />
 
                 <RadioButton
-                    android:id="@+id/tv_tv_live"
+                    android:id="@+id/rb_tv_live"
                     android:drawableLeft="@drawable/ic_live_tv_white_24dp"
                     android:drawableRight="@drawable/ic_navigate_next_white_24dp"
                     android:text="@string/live"
+                    android:checked="true"
                     style="@style/RadioButtonStyle"/>
 
                 <View
@@ -117,7 +118,7 @@
                     android:background="@color/colorDividerLine" />
 
                 <RadioButton
-                    android:id="@+id/tv_video"
+                    android:id="@+id/rb_video"
                     android:drawableLeft="@drawable/ic_video_library_white_24dp"
                     android:drawableRight="@drawable/ic_navigate_next_white_24dp"
                     android:text="@string/video"
@@ -129,7 +130,7 @@
                     android:background="@color/colorDividerLine" />
 
                 <RadioButton
-                    android:id="@+id/tv_information"
+                    android:id="@+id/rb_information"
                     android:drawableLeft="@drawable/ic_library_books_white_24dp"
                     android:drawableRight="@drawable/ic_navigate_next_white_24dp"
                     android:text="@string/information"
@@ -141,7 +142,7 @@
                     android:background="@color/colorDividerLine" />
 
                 <RadioButton
-                    android:id="@+id/tv_shop"
+                    android:id="@+id/rb_shop"
                     android:drawableLeft="@drawable/ic_shopping_cart_white_24dp"
                     android:drawableRight="@drawable/ic_navigate_next_white_24dp"
                     android:text="@string/shop"
