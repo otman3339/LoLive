@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/scan">
+        <menu>
+            <item android:title="@string/game"
+                android:icon="@drawable/ic_live_tv_white_24dp" />
+
+            <item android:title="@string/live"
+                android:icon="@drawable/ic_widgets_white_24dp" />
+
+            <item android:title="@string/search"
+                android:icon="@drawable/ic_search_white_24dp" />
+        </menu>
+    </item>
+
+    <item android:title="@string/scan">
+        <menu>
+            <item android:title="@string/game"
+                android:icon="@drawable/ic_live_tv_white_24dp" />
+
+            <item android:title="@string/live"
+                android:icon="@drawable/ic_widgets_white_24dp" />
+
+            <item android:title="@string/search"
+                android:icon="@drawable/ic_search_white_24dp" />
+        </menu>
+    </item>
+
+    <item android:title="@string/scan">
+        <menu>
+            <item android:title="@string/game"
+                android:icon="@drawable/ic_live_tv_white_24dp" />
+
+            <item android:title="@string/live"
+                android:icon="@drawable/ic_widgets_white_24dp" />
+
+            <item android:title="@string/search"
+                android:icon="@drawable/ic_search_white_24dp" />
+        </menu>
+    </item>
+
+</menu>
