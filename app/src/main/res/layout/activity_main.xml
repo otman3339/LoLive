@@ -16,42 +16,14 @@
         tools:context="view.activity.MainActivity">
 
         <LinearLayout
+            android:id="@+id/main_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
         </LinearLayout>
 
-        <FrameLayout android:id="@+id/nav_view"
-            android:layout_width="@dimen/navigation_width"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:orientation="vertical"
-            android:background="@color/white">
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="45dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1000dp"
-                    android:orientation="vertical">
-
-                    <include layout="@layout/navigation_header" />
-
-                </LinearLayout>
-
-            </ScrollView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_gravity="bottom"
-                android:background="#cccc"></LinearLayout>
-
-        </FrameLayout>
+        <include layout="@layout/navigation_header" />
 
     </android.support.v4.widget.DrawerLayout>
 
