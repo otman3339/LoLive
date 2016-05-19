@@ -191,7 +191,8 @@
             android:gravity="center"
             android:text="@string/register"
             android:textSize="@dimen/navigation_item_text_size"
-            android:textColor="@color/colorTheme"/>
+            android:textColor="@color/colorTheme"
+            android:background="@drawable/navigation_button_bg_selector"/>
 
         <View
             android:layout_width="1px"
@@ -207,7 +208,8 @@
             android:gravity="center"
             android:text="@string/login"
             android:textSize="@dimen/navigation_item_text_size"
-            android:textColor="@color/colorTheme"/>
+            android:textColor="@color/colorTheme"
+            android:background="@drawable/navigation_button_bg_selector"/>
 
     </LinearLayout>
 
