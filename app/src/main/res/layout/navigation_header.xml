@@ -9,9 +9,10 @@
     android:background="@color/colorThemeGray">
 
     <ScrollView
+        android:id="@+id/sv_navigation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="45dp">
+        android:layout_marginBottom="48dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -153,14 +154,61 @@
 
             </RadioGroup>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/advice_channel"
+                android:textColor="@color/gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorDividerLine" />
+
+            <LinearLayout
+                android:id="@+id/lv_advice_channel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
         </LinearLayout>
 
     </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_gravity="bottom"
-        android:background="#cccc"></LinearLayout>
+        android:orientation="horizontal"
+        android:background="@color/colorThemeGray">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/register"
+            android:textSize="@dimen/navigation_item_text_size"
+            android:textColor="@color/colorTheme"/>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/colorDividerLine" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textSize="@dimen/navigation_item_text_size"
+            android:textColor="@color/colorTheme"/>
+
+    </LinearLayout>
 
 </FrameLayout>

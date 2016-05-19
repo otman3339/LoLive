@@ -3,15 +3,25 @@ package com.blue339.lolive.activity;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.blue339.lolive.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends BaseActivity {
 
@@ -20,8 +30,11 @@ public class MainActivity extends BaseActivity {
     private ActionBarDrawerToggle mDrawerToggle;
 
     private TextView tvTvLive, tvVideo, tvInformation, tvShop;
+    private ScrollView svNavigation;
+    private LinearLayout lvAdviceChannel;
 
     private View.OnClickListener clickListener;
+    private Handler mHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +42,19 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         clickListener = new ClickListener();
+        mHandler = new Handler(new Handler.Callback() {
+            @Override
+            public boolean handleMessage(Message msg) {
+                handleBaseMessage(msg);
+                return false;
+            }
+        });
 
         initView();
+    }
+
+    private void handleBaseMessage(Message msg) {
+
     }
 
     protected void initView() {
@@ -59,6 +83,36 @@ public class MainActivity extends BaseActivity {
         Drawable[] tvShopDrawables = tvShop.getCompoundDrawables();
         tvShop.setCompoundDrawables(tintDrawable(tvShopDrawables[0], 1f), null,
                 tintDrawable(tvShopDrawables[2], 1f), null);
+
+        lvAdviceChannel = (LinearLayout) findViewById(R.id.lv_advice_channel);
+
+        List<Map<String, Object>> data = new ArrayList<>();
+        for(int i=0; i<5; i++) {
+            Map<String, Object> map = new HashMap<>();
+            data.add(map);
+            View view = LayoutInflater.from(this).inflate(R.layout.listview_item_navigation, null);
+
+            TextView title = (TextView) view.findViewById(R.id.tv_title);
+            Drawable[] drawables = title.getCompoundDrawables();
+            title.setCompoundDrawables(null, null, tintDrawable(drawables[2], 1f), null);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+
+            lvAdviceChannel.addView(view);
+        }
+        /*SimpleAdapter adapter = new SimpleAdapter(this, data,
+                R.layout.listview_item_navigation, new String[]{}, new int[]{});
+        lvAdviceChannel.setAdapter(adapter);
+        Utility.setListViewHeightBasedOnChildren(lvAdviceChannel);*/
+
+
+        svNavigation = (ScrollView) findViewById(R.id.sv_navigation);
+        svNavigation.smoothScrollTo(0, 0);
+
 
         tvTvLive.setOnClickListener(clickListener);
         tvVideo.setOnClickListener(clickListener);

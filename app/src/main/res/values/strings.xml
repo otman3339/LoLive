@@ -12,5 +12,8 @@
     <string name="setting">设置</string>
     <string name="search">搜索</string>
     <string name="scan">浏览</string>
+    <string name="advice_channel">推荐频道</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
     <string name="tip_exit_app">再按一次退出程序</string>
 </resources>
