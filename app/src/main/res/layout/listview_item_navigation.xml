@@ -8,7 +8,7 @@
         android:id="@+id/iv_avatar"
         android:layout_width="25dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="13dp"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:scaleType="fitXY"
@@ -19,7 +19,7 @@
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="56dp"
         android:layout_toRightOf="@+id/iv_avatar"
         android:gravity="center_vertical|left"
         android:paddingLeft="15dp"

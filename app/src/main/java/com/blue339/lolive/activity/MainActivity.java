@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.graphics.drawable.DrawableCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.LayoutInflater;
@@ -43,6 +42,8 @@ public class MainActivity extends BaseActivity {
     //private ViewPager mViewPager;
     private View.OnClickListener rbClickListener;
     private Handler mHandler;
+
+    private TextView tvRegister, tvLogin;
 
     private static final int RB_TV_LIVE = 0;
     private static final int RB_VIDEO = 1;
@@ -108,6 +109,9 @@ public class MainActivity extends BaseActivity {
         rbs[3].setCompoundDrawables(tintDrawable(tvShopDrawables[0], 1f), null,
                 tintDrawable(tvShopDrawables[2], 1f), null);
 
+        tvRegister = (TextView) findViewById(R.id.tv_register);
+        tvLogin = (TextView) findViewById(R.id.tv_login);
+
         lvAdviceChannel = (LinearLayout) findViewById(R.id.lv_advice_channel);
 
         List<Map<String, Object>> data = new ArrayList<>();
@@ -136,6 +140,20 @@ public class MainActivity extends BaseActivity {
         rbs[1].setOnClickListener(rbClickListener);
         rbs[2].setOnClickListener(rbClickListener);
         rbs[3].setOnClickListener(rbClickListener);
+
+        tvRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        tvLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     private void setDefaultFragment() {

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:orientation="vertical"
-    android:background="@color/colorThemeGray">
+    android:background="@color/white">
 
     <ScrollView
         android:id="@+id/sv_navigation"
@@ -57,11 +57,17 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="48dp"
                 android:gravity="center_vertical|left"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:text="@string/scan"
+                android:textSize="14sp"
                 android:textColor="@color/gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorDividerLine" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,10 +105,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/colorDividerLine" />
 
                 <RadioButton
                     android:id="@+id/rb_tv_live"
@@ -112,22 +114,12 @@
                     android:checked="true"
                     style="@style/RadioButtonStyle"/>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/colorDividerLine" />
-
                 <RadioButton
                     android:id="@+id/rb_video"
                     android:drawableLeft="@drawable/ic_video_library_white_24dp"
                     android:drawableRight="@drawable/ic_navigate_next_white_24dp"
                     android:text="@string/video"
                     style="@style/RadioButtonStyle"/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/colorDividerLine" />
 
                 <RadioButton
                     android:id="@+id/rb_information"
@@ -136,11 +128,6 @@
                     android:text="@string/information"
                     style="@style/RadioButtonStyle"/>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/colorDividerLine" />
-
                 <RadioButton
                     android:id="@+id/rb_shop"
                     android:drawableLeft="@drawable/ic_shopping_cart_white_24dp"
@@ -148,19 +135,20 @@
                     android:text="@string/shop"
                     style="@style/RadioButtonStyle"/>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/colorDividerLine" />
-
             </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorDividerLine" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="48dp"
                 android:gravity="center_vertical|left"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:text="@string/advice_channel"
+                android:textSize="14sp"
                 android:textColor="@color/gray" />
 
             <View
@@ -186,6 +174,7 @@
         android:background="@color/colorThemeGray">
 
         <TextView
+            android:id="@+id/tv_register"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -203,6 +192,7 @@
             android:background="@color/colorDividerLine" />
 
         <TextView
+            android:id="@+id/tv_login"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
