@@ -17,7 +17,7 @@ import com.blue339.lolive.views.RecycleViewDivider;
 /**
  * Created by Blue on 2016/5/19.
  */
-public class TvLiveFragment extends Fragment {
+public class VideoFragment extends Fragment {
 
     private int index;
 
@@ -26,29 +26,29 @@ public class TvLiveFragment extends Fragment {
 
     private SwipeRefreshLayout refresh;
 
-    public TvLiveFragment(){
+    public VideoFragment(){
         super();
     }
 
-    public TvLiveFragment(int i) {
+    public VideoFragment(int i) {
         super();
         this.index = i;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tvlive, container, false);
+        View view = inflater.inflate(R.layout.fragment_video, container, false);
         TextView textView = (TextView) view.findViewById(R.id.content);
         textView.setText("Fragment(" + (index + 1) + ")");
 
-        mRecycleView = (RecyclerView) view.findViewById(R.id.tvlive_recycleview);
+        mRecycleView = (RecyclerView) view.findViewById(R.id.video_recycleview);
         mLayoutManager = new GridLayoutManager(getActivity(), 2);
         mRecycleView.setHasFixedSize(true);
         mRecycleView.setLayoutManager(mLayoutManager);
         mRecycleView.addItemDecoration(new RecycleViewDivider(getActivity()));
         mRecycleView.setAdapter(new TvLiveAdapter());
 
-        refresh = (SwipeRefreshLayout) view.findViewById(R.id.tvlive_refresh);
+        refresh = (SwipeRefreshLayout) view.findViewById(R.id.video_refresh);
         refresh.setColorSchemeResources(R.color.colorTheme);
 
         return view;

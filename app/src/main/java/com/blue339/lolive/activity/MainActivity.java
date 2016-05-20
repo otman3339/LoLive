@@ -34,7 +34,7 @@ public class MainActivity extends BaseActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
 
-    //private RadioButton rbs[0], rbs[1], rbs[2], rbs[3];
+    //private RadioButton rbs[0], rbs[1], rbs[3], rbs[4];
     private RadioButton[] rbs;
     private ScrollView svNavigation;
     private LinearLayout lvAdviceChannel;
@@ -52,7 +52,7 @@ public class MainActivity extends BaseActivity {
 
     private int currentFragmentIndex = 0;
 
-    private Fragment tvLiveFragment, videoFragment, informationFragment, shopFragment;
+    private Fragment tvLiveFragment, videoFragment, gifFragment, informationFragment, shopFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +88,7 @@ public class MainActivity extends BaseActivity {
         mDrawerToggle.syncState();
         mDrawerLayout.addDrawerListener(mDrawerToggle);
 
-        rbs = new RadioButton[4];
+        rbs = new RadioButton[5];
         rbs[0] = (RadioButton) findViewById(R.id.rb_tv_live);
         Drawable[] tvTvLiveDrawables = rbs[0].getCompoundDrawables();
         rbs[0].setCompoundDrawables(tintDrawable(tvTvLiveDrawables[0], 1f), null,
@@ -99,14 +99,19 @@ public class MainActivity extends BaseActivity {
         rbs[1].setCompoundDrawables(tintDrawable(tvVideoDrawables[0], 1f), null,
                 tintDrawable(tvVideoDrawables[2], 1f), null);
 
-        rbs[2] = (RadioButton) findViewById(R.id.rb_information);
-        Drawable[] tvInformationDrawables = rbs[2].getCompoundDrawables();
-        rbs[2].setCompoundDrawables(tintDrawable(tvInformationDrawables[0], 1f), null,
+        rbs[2] = (RadioButton) findViewById(R.id.rb_gif);
+        Drawable[] tvGifDrawables = rbs[2].getCompoundDrawables();
+        rbs[2].setCompoundDrawables(tintDrawable(tvGifDrawables[0], 1f), null,
+                tintDrawable(tvGifDrawables[2], 1f), null);
+
+        rbs[3] = (RadioButton) findViewById(R.id.rb_information);
+        Drawable[] tvInformationDrawables = rbs[3].getCompoundDrawables();
+        rbs[3].setCompoundDrawables(tintDrawable(tvInformationDrawables[0], 1f), null,
                 tintDrawable(tvInformationDrawables[2], 1f), null);
 
-        rbs[3] = (RadioButton) findViewById(R.id.rb_shop);
-        Drawable[] tvShopDrawables = rbs[3].getCompoundDrawables();
-        rbs[3].setCompoundDrawables(tintDrawable(tvShopDrawables[0], 1f), null,
+        rbs[4] = (RadioButton) findViewById(R.id.rb_shop);
+        Drawable[] tvShopDrawables = rbs[4].getCompoundDrawables();
+        rbs[4].setCompoundDrawables(tintDrawable(tvShopDrawables[0], 1f), null,
                 tintDrawable(tvShopDrawables[2], 1f), null);
 
         tvRegister = (TextView) findViewById(R.id.tv_register);
@@ -140,6 +145,7 @@ public class MainActivity extends BaseActivity {
         rbs[1].setOnClickListener(rbClickListener);
         rbs[2].setOnClickListener(rbClickListener);
         rbs[3].setOnClickListener(rbClickListener);
+        rbs[4].setOnClickListener(rbClickListener);
 
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -208,12 +214,16 @@ public class MainActivity extends BaseActivity {
                     videoFragment = new TvLiveFragment(1);
                     transaction.replace(R.id.main_content, videoFragment);
                     break;
+                case R.id.rb_gif:
+                    gifFragment = new TvLiveFragment(2);
+                    transaction.replace(R.id.main_content, gifFragment);
+                    break;
                 case R.id.rb_information:
-                    informationFragment = new TvLiveFragment(2);
+                    informationFragment = new TvLiveFragment(3);
                     transaction.replace(R.id.main_content, informationFragment);
                     break;
                 case R.id.rb_shop:
-                    shopFragment = new TvLiveFragment(3);
+                    shopFragment = new TvLiveFragment(4);
                     transaction.replace(R.id.main_content, shopFragment);
                     break;
             }

@@ -13,12 +13,12 @@
         android:text="新建" />
 
     <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/refresh"
+        android:id="@+id/video_refresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/tvlive_recycleview"
+            android:id="@+id/video_recycleview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"/>
