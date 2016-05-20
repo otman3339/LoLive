@@ -2,6 +2,7 @@ package com.blue339.lolive.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -22,6 +23,8 @@ public class TvLiveFragment extends Fragment {
 
     private RecyclerView mRecycleView;
     private RecyclerView.LayoutManager mLayoutManager;
+
+    private SwipeRefreshLayout refresh;
 
     public TvLiveFragment(){
         super();
@@ -44,6 +47,9 @@ public class TvLiveFragment extends Fragment {
         mRecycleView.setLayoutManager(mLayoutManager);
         mRecycleView.addItemDecoration(new RecycleViewDivider(getActivity()));
         mRecycleView.setAdapter(new TvLiveAdapter());
+
+        refresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
+        refresh.setColorSchemeResources(R.color.colorTheme);
 
         return view;
     }

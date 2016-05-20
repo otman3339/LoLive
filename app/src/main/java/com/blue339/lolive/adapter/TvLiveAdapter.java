@@ -30,7 +30,7 @@ public class TvLiveAdapter extends RecyclerView.Adapter<TvLiveAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return 100;
+        return 31;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
