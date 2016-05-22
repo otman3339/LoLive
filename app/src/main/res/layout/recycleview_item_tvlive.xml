@@ -1,20 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_marginBottom="10dp">
 
     <ImageView
         android:id="@+id/tvlive_image"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="180dp"
         android:background="@drawable/default_tvlive"/>
 
-
     <TextView
-        android:id="@+id/tvlive_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/game"/>
+        android:layout_gravity="top|right"
+        android:padding="5dp"
+        android:text="斗鱼"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="#99222222"/>
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tvlive_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="一区王者 新人主播！只有真实伤害的男人"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:textSize="14dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvlive_title"
+            android:layout_alignLeft="@+id/tvlive_title"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.blue339.lolive.views.CircleImageView
+                android:id="@+id/tvlive_avatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/default_head"
+                app:civ_border_color="@color/gray"
+                app:civ_border_width="1dp"/>
+
+            <TextView
+                android:id="@+id/tvlive_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text=" 阿怡大小姐丶"
+                android:textStyle="bold"
+                android:textColor="@color/gray"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tvlive_time"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:text="666,666 观众"
+                android:textStyle="bold"
+                android:textColor="@color/gray"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:padding="5dp"
+        android:text="斗鱼"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="#99222222"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/tvlive_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Last炫神丶zz"
+            android:textStyle="bold"
+            android:textColor="@color/colorTheme"
+            android:textSize="12dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvlive_count"
+            android:layout_alignBottom="@+id/tvlive_count"
+            android:layout_toRightOf="@+id/tvlive_count"
+            android:layout_marginLeft="10dp"
+            android:background="@color/colorTheme" />
+
+        <TextView
+            android:id="@+id/tvlive_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvlive_count"
+            android:layout_alignBottom="@+id/tvlive_count"
+            android:layout_toRightOf="@+id/tvlive_count"
+            android:layout_marginLeft="20dp"
+            android:text="666,666 观众"
+            android:textStyle="bold"
+            android:textColor="@color/colorTheme"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/tvlive_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvlive_count"
+            android:layout_alignLeft="@+id/tvlive_count"
+            android:layout_marginBottom="10dp"
+            android:text="一区王者 新人主播！只有真实伤害的男人"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="14dp"/>
+
+
+
+    </RelativeLayout>-->
+
+</FrameLayout>

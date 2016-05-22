@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/video_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/default_tvlive"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:padding="5dp"
+        android:text="20:35"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="#99222222"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="欺师灭祖竟是陷害，一个忍者的故事"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/video_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/video_title"
+            android:layout_alignLeft="@+id/video_title"
+            android:layout_marginBottom="10dp"
+            android:text="66,666 次观看"
+            android:textStyle="bold"
+            android:textColor="@color/colorTheme"
+            android:textSize="12dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/video_count"
+            android:layout_alignBottom="@+id/video_count"
+            android:layout_toRightOf="@+id/video_count"
+            android:layout_marginLeft="10dp"
+            android:background="@color/colorTheme" />
+
+        <TextView
+            android:id="@+id/video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/video_count"
+            android:layout_alignBottom="@+id/video_count"
+            android:layout_toRightOf="@+id/video_count"
+            android:layout_marginLeft="20dp"
+            android:text="3小时以前"
+            android:textStyle="bold"
+            android:textColor="@color/colorTheme"
+            android:textSize="12dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

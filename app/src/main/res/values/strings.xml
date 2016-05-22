@@ -17,4 +17,9 @@
     <string name="register">注册</string>
     <string name="login">登录</string>
     <string name="tip_exit_app">再按一次退出程序</string>
+
+    <string name="newest_video">最新视频</string>
+    <string name="commentary_video">解说视频</string>
+    <string name="match_video">赛事视频</string>
+    <string name="interesting_video">趣味集锦</string>
 </resources>

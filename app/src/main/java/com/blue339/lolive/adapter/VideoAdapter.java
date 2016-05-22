@@ -1,6 +1,5 @@
 package com.blue339.lolive.adapter;
 
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -10,21 +9,19 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.blue339.lolive.R;
-import com.blue339.lolive.activity.WebViewActivity;
 
 /**
  * Created by zeminwang on 16/5/20.
  */
-public class TvLiveAdapter extends RecyclerView.Adapter<TvLiveAdapter.ViewHolder>{
+public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder>{
 
 
     @Override
-    public TvLiveAdapter.ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
-        final View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.recycleview_item_tvlive, parent, false);
+    public VideoAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.recycleview_item_video, parent, false);
 
         final Animation animation = AnimationUtils.loadAnimation(parent.getContext(), R.anim.fade_zoom_out);
 
@@ -49,21 +46,12 @@ public class TvLiveAdapter extends RecyclerView.Adapter<TvLiveAdapter.ViewHolder
             }
         });
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(parent.getContext(), WebViewActivity.class);
-//                intent.putExtra("swfUrl", "http://weblbs.yystatic.com/s/92174038/2503273946/huyacoop.swf");
-                intent.putExtra("swfUrl", "http://v.behe.com/2016/05/19/c558ecbd6007f0e989a9f73bb4fb1fde.swf");
-                parent.getContext().startActivity(intent);
-            }
-        });
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(TvLiveAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(VideoAdapter.ViewHolder holder, int position) {
 
     }
 
@@ -80,8 +68,8 @@ public class TvLiveAdapter extends RecyclerView.Adapter<TvLiveAdapter.ViewHolder
         public ViewHolder(View itemView) {
             super(itemView);
 
-            tvLiveImage = (ImageView) itemView.findViewById(R.id.tvlive_image);
-            tvLiveTitle = (TextView) itemView.findViewById(R.id.tvlive_title);
+            tvLiveImage = (ImageView) itemView.findViewById(R.id.video_image);
+            //tvLiveTitle = (TextView) itemView.findViewById(R.id.tvlive_title);
         }
     }
 }

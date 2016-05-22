@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,10 +43,10 @@ public class TvLiveFragment extends Fragment {
         textView.setText("Fragment(" + (index + 1) + ")");
 
         mRecycleView = (RecyclerView) view.findViewById(R.id.tvlive_recycleview);
-        mLayoutManager = new GridLayoutManager(getActivity(), 2);
+        mLayoutManager = new LinearLayoutManager(getActivity());
         mRecycleView.setHasFixedSize(true);
         mRecycleView.setLayoutManager(mLayoutManager);
-        mRecycleView.addItemDecoration(new RecycleViewDivider(getActivity()));
+        //mRecycleView.addItemDecoration(new RecycleViewDivider(getActivity()));
         mRecycleView.setAdapter(new TvLiveAdapter());
 
         refresh = (SwipeRefreshLayout) view.findViewById(R.id.tvlive_refresh);

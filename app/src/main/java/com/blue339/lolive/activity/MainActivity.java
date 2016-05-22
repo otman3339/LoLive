@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.blue339.lolive.R;
 import com.blue339.lolive.fragment.TvLiveFragment;
+import com.blue339.lolive.fragment.VideoFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -211,7 +212,7 @@ public class MainActivity extends BaseActivity {
                     transaction.replace(R.id.main_content, tvLiveFragment);
                     break;
                 case R.id.rb_video:
-                    videoFragment = new TvLiveFragment(1);
+                    videoFragment = new VideoFragment(1);
                     transaction.replace(R.id.main_content, videoFragment);
                     break;
                 case R.id.rb_gif:
