@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.blue339.lolive.R;
+import com.blue339.lolive.fragment.NewsFragment;
 import com.blue339.lolive.fragment.TvLiveFragment;
 import com.blue339.lolive.fragment.VideoFragment;
 
@@ -220,7 +221,7 @@ public class MainActivity extends BaseActivity {
                     transaction.replace(R.id.main_content, gifFragment);
                     break;
                 case R.id.rb_information:
-                    informationFragment = new TvLiveFragment(3);
+                    informationFragment = new NewsFragment(3);
                     transaction.replace(R.id.main_content, informationFragment);
                     break;
                 case R.id.rb_shop:

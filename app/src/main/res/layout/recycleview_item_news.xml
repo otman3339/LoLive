@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorThemeGray">
+
+    <ImageView
+        android:id="@+id/news_image"
+        android:layout_width="120dp"
+        android:layout_height="85dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/default_tvlive"/>
+
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/news_image"
+        android:layout_toRightOf="@+id/news_image"
+        android:layout_marginRight="10dp"
+        android:text="每日一笑：你被套路了"
+        android:textSize="17sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/news_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/news_title"
+        android:layout_below="@+id/news_title"
+        android:layout_marginRight="10dp"
+        android:lines="2"
+        android:ellipsize="end"
+        android:text="城里人太会玩了，我想回家...城里人太会玩了，我想回家城里人太会玩了，我想回家城里人太会玩了，我想回家城里人太会玩了，我想回家"
+        android:textSize="14sp"
+        android:textColor="@color/gray"/>
+
+    <TextView
+        android:id="@+id/news_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/news_image"
+        android:layout_marginRight="5dp"
+        android:text="5小时前"
+        android:textSize="14sp"
+        android:textColor="@color/gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/news_image"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorDividerLine" />
+
+
+</RelativeLayout>

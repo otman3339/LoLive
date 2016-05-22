@@ -1,12 +1,15 @@
 package com.blue339.lolive.activity;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.blue339.lolive.R;
@@ -21,13 +24,26 @@ public class WebViewActivity extends Activity {
     private WebView mWebView;
     private ProgressDialog mProgressDialog;
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
 
         mWebView=(WebView)findViewById(R.id.webview);
-        String swfUrl = getIntent().getStringExtra("swfUrl");
+        mWebView.getSettings().setJavaScriptEnabled(true);
+//        mWebView.getSettings().setPluginsEnabled(true);
+        mWebView.getSettings().setAllowFileAccess(true);
+        mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
+        mWebView.setBackgroundColor(0);
+        String swfUrl = "http://material.mtty.com/201605/03/iayOcK.swf";
+
+        try {
+            Thread.sleep(500);// 主线程暂停下，否则容易白屏，原因未知
+        } catch (InterruptedException e) {
+            // TODO 自动生成的 catch 块
+            e.printStackTrace();
+        }
 
         mProgressDialog=ProgressDialog.show(this, "请稍等...", "加载flash中...", true);
 
