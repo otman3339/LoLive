@@ -10,10 +10,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.blue339.lolive.R;
-import com.blue339.lolive.activity.WebViewActivity;
+import com.blue339.lolive.activity.PlayerActivity;
 
 /**
  * Created by zeminwang on 16/5/20.
@@ -52,7 +51,7 @@ public class TvLiveAdapter extends RecyclerView.Adapter<TvLiveAdapter.ViewHolder
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(parent.getContext(), WebViewActivity.class);
+                Intent intent = new Intent(parent.getContext(), PlayerActivity.class);
 //                intent.putExtra("swfUrl", "http://weblbs.yystatic.com/s/92174038/2503273946/huyacoop.swf");
                 intent.putExtra("swfUrl", "http://v.behe.com/2016/05/19/c558ecbd6007f0e989a9f73bb4fb1fde.swf");
                 parent.getContext().startActivity(intent);
